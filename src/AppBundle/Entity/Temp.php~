@@ -1,0 +1,66 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Temp
+ *
+ * @ORM\Table(name="temp")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\TempRepository")
+ */
+class Temp
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="dummy", type="float")
+     */
+    private $dummy;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set dummy
+     *
+     * @param float $dummy
+     *
+     * @return Temp
+     */
+    public function setDummy($dummy)
+    {
+        $this->dummy = $dummy;
+
+        return $this;
+    }
+
+    /**
+     * Get dummy
+     *
+     * @return float
+     */
+    public function getDummy()
+    {
+        return $this->dummy;
+    }
+}
+

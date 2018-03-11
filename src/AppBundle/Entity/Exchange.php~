@@ -1,0 +1,51 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Exchange
+ *
+ * @ORM\Table(name="exchange")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ExchangeRepository")
+ */
+class Exchange
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="usd", type="float")
+     */
+    private $usd;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="eur", type="float")
+     */
+    private $eur;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="gbp", type="float")
+     */
+    private $gbp;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\ExchangeProvider", inversedBy="exchanges")
+     * @ORM\JoinColumn(name="provider", referencedColumnName="id")
+     */
+    private $provider;
+
+}

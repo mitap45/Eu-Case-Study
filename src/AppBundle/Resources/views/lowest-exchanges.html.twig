@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>En Uygun Case Study</title>
+
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}" />
+
+    <script src="{{ asset('assets/js/jquery-2.1.1.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
+
+    <script>
+    </script>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Lowest Exchanges </h2>
+    <table class="table table-bordered" >
+        <thead>
+        <tr>
+            <th>Lowest Usd</th>
+            <th>Lowest Eur</th>
+            <th>Lowest Gbp</th>
+        </tr>
+        </thead>
+        <tbody >
+            <tr>
+                <td>{{ lowestUsd }}</td>
+                <td>{{ lowestEur }}</td>
+                <td>{{ lowestGbp }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>
